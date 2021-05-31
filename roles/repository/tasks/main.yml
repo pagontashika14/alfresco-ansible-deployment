@@ -42,11 +42,10 @@
 
 - name: "Download {{ acs_zip_file }}"
   get_url:
-    url: "{{ downloads.acs_zip_url }}"
+    url: "https://download.alfresco.com/cloudfront/release/community/7.0.0-build-2355/alfresco-content-services-community-distribution-7.0.0.zip"
     dest: "{{ download_location }}/{{ acs_zip_file }}"
     url_username: "{{ nexus_user }}"
     url_password: "{{ nexus_password }}"
-    checksum: "sha1:{{ downloads.acs_zip_sha1_checksum }}"
     owner: "{{ username }}"
     group: "{{ group_name }}"
     mode: 'u=rw,g=r,o=r'

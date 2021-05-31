@@ -28,9 +28,8 @@
 
 - name: "Download alfresco-search-services-{{ search.version }}.zip"
   get_url:
-    url: "{{ downloads.search_zip_url }}"
+    url: "https://download.alfresco.com/cloudfront/release/community/SearchServices/2.0.1/alfresco-search-services-2.0.1.zip"
     dest: "{{ download_location }}/alfresco-search-services-{{ search.version }}.zip"
-    checksum: "sha1:{{ downloads.search_zip_sha1_checksum }}"
     mode: 'u=r,g=r,o=r'
     url_username: "{{ nexus_user }}"
     url_password: "{{ nexus_password }}"

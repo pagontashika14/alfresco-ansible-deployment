@@ -6,8 +6,7 @@
 
 - name: Download libreoffice package archive
   get_url:
-    url: "{{ libreoffice_archive_url }}"
-    checksum: sha1:{{ libreoffice_archive_sha1_checksum }}
+    url: "https://mirror.freedif.org/TDF/libreoffice/stable/7.1.3/deb/x86_64/LibreOffice_7.1.3_Linux_x86-64_deb.tar.gz"
     dest: "{{ download_location }}/libreoffice.tar.gz"
     timeout: 950
   register: libreoffice_download
